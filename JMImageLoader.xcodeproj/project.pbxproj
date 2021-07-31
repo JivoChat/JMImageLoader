@@ -12,6 +12,9 @@
 		FA47E3B426B569D300C0F525 /* JMImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = FA47E3A626B569D300C0F525 /* JMImageLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA47E3BE26B56E2100C0F525 /* ImageCaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3BD26B56E2100C0F525 /* ImageCaching.swift */; };
 		FA47E3C726B56F1400C0F525 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3C626B56F1400C0F525 /* ImageCache.swift */; };
+		FA47E3C926B583D100C0F525 /* ImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3C826B583D100C0F525 /* ImageLoading.swift */; };
+		FA47E3CB26B5851700C0F525 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3CA26B5851700C0F525 /* ImageLoader.swift */; };
+		FA47E3CD26B587B400C0F525 /* URLSessionDataTask+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3CC26B587B400C0F525 /* URLSessionDataTask+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +36,9 @@
 		FA47E3B326B569D300C0F525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA47E3BD26B56E2100C0F525 /* ImageCaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCaching.swift; sourceTree = "<group>"; };
 		FA47E3C626B56F1400C0F525 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		FA47E3C826B583D100C0F525 /* ImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoading.swift; sourceTree = "<group>"; };
+		FA47E3CA26B5851700C0F525 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		FA47E3CC26B587B400C0F525 /* URLSessionDataTask+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionDataTask+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +81,11 @@
 		FA47E3A526B569D300C0F525 /* JMImageLoader */ = {
 			isa = PBXGroup;
 			children = (
+				FA47E3CE26B587CD00C0F525 /* Extensions */,
 				FA47E3BD26B56E2100C0F525 /* ImageCaching.swift */,
 				FA47E3C626B56F1400C0F525 /* ImageCache.swift */,
+				FA47E3C826B583D100C0F525 /* ImageLoading.swift */,
+				FA47E3CA26B5851700C0F525 /* ImageLoader.swift */,
 				FA47E3A626B569D300C0F525 /* JMImageLoader.h */,
 				FA47E3A726B569D300C0F525 /* Info.plist */,
 			);
@@ -90,6 +99,14 @@
 				FA47E3B326B569D300C0F525 /* Info.plist */,
 			);
 			path = JMImageLoaderTests;
+			sourceTree = "<group>";
+		};
+		FA47E3CE26B587CD00C0F525 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA47E3CC26B587B400C0F525 /* URLSessionDataTask+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,8 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA47E3C926B583D100C0F525 /* ImageLoading.swift in Sources */,
 				FA47E3C726B56F1400C0F525 /* ImageCache.swift in Sources */,
+				FA47E3CB26B5851700C0F525 /* ImageLoader.swift in Sources */,
 				FA47E3BE26B56E2100C0F525 /* ImageCaching.swift in Sources */,
+				FA47E3CD26B587B400C0F525 /* URLSessionDataTask+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
