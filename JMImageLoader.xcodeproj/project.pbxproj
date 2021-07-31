@@ -10,6 +10,7 @@
 		FA47E3AD26B569D300C0F525 /* JMImageLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA47E3A326B569D300C0F525 /* JMImageLoader.framework */; };
 		FA47E3B226B569D300C0F525 /* JMImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3B126B569D300C0F525 /* JMImageLoaderTests.swift */; };
 		FA47E3B426B569D300C0F525 /* JMImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = FA47E3A626B569D300C0F525 /* JMImageLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA47E3BE26B56E2100C0F525 /* ImageCaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3BD26B56E2100C0F525 /* ImageCaching.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		FA47E3AC26B569D300C0F525 /* JMImageLoaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JMImageLoaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA47E3B126B569D300C0F525 /* JMImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMImageLoaderTests.swift; sourceTree = "<group>"; };
 		FA47E3B326B569D300C0F525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA47E3BD26B56E2100C0F525 /* ImageCaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCaching.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		FA47E3A526B569D300C0F525 /* JMImageLoader */ = {
 			isa = PBXGroup;
 			children = (
+				FA47E3BD26B56E2100C0F525 /* ImageCaching.swift */,
 				FA47E3A626B569D300C0F525 /* JMImageLoader.h */,
 				FA47E3A726B569D300C0F525 /* Info.plist */,
 			);
@@ -147,6 +150,7 @@
 				TargetAttributes = {
 					FA47E3A226B569D300C0F525 = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					FA47E3AB26B569D300C0F525 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA47E3BE26B56E2100C0F525 /* ImageCaching.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,7 @@
 		FA47E3B826B569D400C0F525 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2Z8328WFM8;
@@ -359,6 +365,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jivosite.JMImageLoader;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -367,6 +374,7 @@
 		FA47E3B926B569D400C0F525 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 2Z8328WFM8;
@@ -393,6 +401,7 @@
 		FA47E3BB26B569D400C0F525 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Z8328WFM8;
 				INFOPLIST_FILE = JMImageLoaderTests/Info.plist;
@@ -411,6 +420,7 @@
 		FA47E3BC26B569D400C0F525 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Z8328WFM8;
 				INFOPLIST_FILE = JMImageLoaderTests/Info.plist;
