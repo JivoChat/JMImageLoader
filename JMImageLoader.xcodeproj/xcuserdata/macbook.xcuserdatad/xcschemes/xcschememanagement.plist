@@ -9,6 +9,29 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>JMImageLoaderTestApp.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>FA47E3A226B569D300C0F525</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA47E3AB26B569D300C0F525</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FABAF5E226B82EC700128A94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

@@ -17,6 +17,13 @@
 		FA47E3D026B5AA2F00C0F525 /* Abstract.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3CF26B5AA2F00C0F525 /* Abstract.swift */; };
 		FABAF5DE26B825A900128A94 /* ImageCacheLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF5DD26B825A900128A94 /* ImageCacheLoading.swift */; };
 		FABAF5E026B8265900128A94 /* ImageCacheLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF5DF26B8265900128A94 /* ImageCacheLoader.swift */; };
+		FABAF5FB26B8301600128A94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF5FA26B8301600128A94 /* AppDelegate.swift */; };
+		FABAF5FD26B8301600128A94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF5FC26B8301600128A94 /* SceneDelegate.swift */; };
+		FABAF5FF26B8301600128A94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF5FE26B8301600128A94 /* ViewController.swift */; };
+		FABAF60226B8301600128A94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABAF60026B8301600128A94 /* Main.storyboard */; };
+		FABAF60426B8301700128A94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FABAF60326B8301700128A94 /* Assets.xcassets */; };
+		FABAF60726B8301700128A94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FABAF60526B8301700128A94 /* LaunchScreen.storyboard */; };
+		FABAF61326B8303800128A94 /* JMImageLoaderTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF61226B8303800128A94 /* JMImageLoaderTestAppTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +33,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = FA47E3A226B569D300C0F525;
 			remoteInfo = JMImageLoader;
+		};
+		FABAF61526B8303800128A94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA47E39A26B569D300C0F525 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FABAF5F726B8301600128A94;
+			remoteInfo = JMImageLoaderTestApp;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -43,6 +57,17 @@
 		FA47E3CF26B5AA2F00C0F525 /* Abstract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Abstract.swift; sourceTree = "<group>"; };
 		FABAF5DD26B825A900128A94 /* ImageCacheLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheLoading.swift; sourceTree = "<group>"; };
 		FABAF5DF26B8265900128A94 /* ImageCacheLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheLoader.swift; sourceTree = "<group>"; };
+		FABAF5F826B8301600128A94 /* JMImageLoaderTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMImageLoaderTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FABAF5FA26B8301600128A94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FABAF5FC26B8301600128A94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FABAF5FE26B8301600128A94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FABAF60126B8301600128A94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FABAF60326B8301700128A94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FABAF60626B8301700128A94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FABAF60826B8301700128A94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FABAF61026B8303800128A94 /* JMImageLoaderTestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JMImageLoaderTestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FABAF61226B8303800128A94 /* JMImageLoaderTestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMImageLoaderTestAppTests.swift; sourceTree = "<group>"; };
+		FABAF61426B8303800128A94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +86,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FABAF5F526B8301600128A94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FABAF60D26B8303800128A94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -69,6 +108,8 @@
 			children = (
 				FA47E3A526B569D300C0F525 /* JMImageLoader */,
 				FA47E3B026B569D300C0F525 /* JMImageLoaderTests */,
+				FABAF5F926B8301600128A94 /* JMImageLoaderTestApp */,
+				FABAF61126B8303800128A94 /* JMImageLoaderTestAppTests */,
 				FA47E3A426B569D300C0F525 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,6 +119,8 @@
 			children = (
 				FA47E3A326B569D300C0F525 /* JMImageLoader.framework */,
 				FA47E3AC26B569D300C0F525 /* JMImageLoaderTests.xctest */,
+				FABAF5F826B8301600128A94 /* JMImageLoaderTestApp.app */,
+				FABAF61026B8303800128A94 /* JMImageLoaderTestAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,10 +134,10 @@
 				FA47E3C826B583D100C0F525 /* WebImageLoading.swift */,
 				FA47E3CA26B5851700C0F525 /* WebImageLoader.swift */,
 				FA47E3CF26B5AA2F00C0F525 /* Abstract.swift */,
-				FA47E3A626B569D300C0F525 /* JMImageLoader.h */,
-				FA47E3A726B569D300C0F525 /* Info.plist */,
 				FABAF5DD26B825A900128A94 /* ImageCacheLoading.swift */,
 				FABAF5DF26B8265900128A94 /* ImageCacheLoader.swift */,
+				FA47E3A626B569D300C0F525 /* JMImageLoader.h */,
+				FA47E3A726B569D300C0F525 /* Info.plist */,
 			);
 			path = JMImageLoader;
 			sourceTree = "<group>";
@@ -113,6 +156,29 @@
 			children = (
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FABAF5F926B8301600128A94 /* JMImageLoaderTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				FABAF5FA26B8301600128A94 /* AppDelegate.swift */,
+				FABAF5FC26B8301600128A94 /* SceneDelegate.swift */,
+				FABAF5FE26B8301600128A94 /* ViewController.swift */,
+				FABAF60026B8301600128A94 /* Main.storyboard */,
+				FABAF60326B8301700128A94 /* Assets.xcassets */,
+				FABAF60526B8301700128A94 /* LaunchScreen.storyboard */,
+				FABAF60826B8301700128A94 /* Info.plist */,
+			);
+			path = JMImageLoaderTestApp;
+			sourceTree = "<group>";
+		};
+		FABAF61126B8303800128A94 /* JMImageLoaderTestAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				FABAF61226B8303800128A94 /* JMImageLoaderTestAppTests.swift */,
+				FABAF61426B8303800128A94 /* Info.plist */,
+			);
+			path = JMImageLoaderTestAppTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +231,41 @@
 			productReference = FA47E3AC26B569D300C0F525 /* JMImageLoaderTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		FABAF5F726B8301600128A94 /* JMImageLoaderTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FABAF60926B8301700128A94 /* Build configuration list for PBXNativeTarget "JMImageLoaderTestApp" */;
+			buildPhases = (
+				FABAF5F426B8301600128A94 /* Sources */,
+				FABAF5F526B8301600128A94 /* Frameworks */,
+				FABAF5F626B8301600128A94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JMImageLoaderTestApp;
+			productName = JMImageLoaderTestApp;
+			productReference = FABAF5F826B8301600128A94 /* JMImageLoaderTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FABAF60F26B8303800128A94 /* JMImageLoaderTestAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FABAF61726B8303800128A94 /* Build configuration list for PBXNativeTarget "JMImageLoaderTestAppTests" */;
+			buildPhases = (
+				FABAF60C26B8303800128A94 /* Sources */,
+				FABAF60D26B8303800128A94 /* Frameworks */,
+				FABAF60E26B8303800128A94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FABAF61626B8303800128A94 /* PBXTargetDependency */,
+			);
+			name = JMImageLoaderTestAppTests;
+			productName = JMImageLoaderTestAppTests;
+			productReference = FABAF61026B8303800128A94 /* JMImageLoaderTestAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -180,6 +281,13 @@
 					};
 					FA47E3AB26B569D300C0F525 = {
 						CreatedOnToolsVersion = 12.5.1;
+					};
+					FABAF5F726B8301600128A94 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					FABAF60F26B8303800128A94 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = FABAF5F726B8301600128A94;
 					};
 				};
 			};
@@ -198,6 +306,8 @@
 			targets = (
 				FA47E3A226B569D300C0F525 /* JMImageLoader */,
 				FA47E3AB26B569D300C0F525 /* JMImageLoaderTests */,
+				FABAF5F726B8301600128A94 /* JMImageLoaderTestApp */,
+				FABAF60F26B8303800128A94 /* JMImageLoaderTestAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -211,6 +321,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FA47E3AA26B569D300C0F525 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FABAF5F626B8301600128A94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FABAF60726B8301700128A94 /* LaunchScreen.storyboard in Resources */,
+				FABAF60426B8301700128A94 /* Assets.xcassets in Resources */,
+				FABAF60226B8301600128A94 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FABAF60E26B8303800128A94 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -242,6 +369,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FABAF5F426B8301600128A94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FABAF5FF26B8301600128A94 /* ViewController.swift in Sources */,
+				FABAF5FB26B8301600128A94 /* AppDelegate.swift in Sources */,
+				FABAF5FD26B8301600128A94 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FABAF60C26B8303800128A94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FABAF61326B8303800128A94 /* JMImageLoaderTestAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -250,7 +395,31 @@
 			target = FA47E3A226B569D300C0F525 /* JMImageLoader */;
 			targetProxy = FA47E3AE26B569D300C0F525 /* PBXContainerItemProxy */;
 		};
+		FABAF61626B8303800128A94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FABAF5F726B8301600128A94 /* JMImageLoaderTestApp */;
+			targetProxy = FABAF61526B8303800128A94 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FABAF60026B8301600128A94 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FABAF60126B8301600128A94 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FABAF60526B8301700128A94 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FABAF60626B8301700128A94 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FA47E3B526B569D400C0F525 /* Debug */ = {
@@ -468,6 +637,84 @@
 			};
 			name = Release;
 		};
+		FABAF60A26B8301700128A94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Z8328WFM8;
+				INFOPLIST_FILE = JMImageLoaderTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jivosite.JMImageLoaderTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FABAF60B26B8301700128A94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Z8328WFM8;
+				INFOPLIST_FILE = JMImageLoaderTestApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jivosite.JMImageLoaderTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FABAF61826B8303800128A94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Z8328WFM8;
+				INFOPLIST_FILE = JMImageLoaderTestAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jivosite.JMImageLoaderTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JMImageLoaderTestApp.app/JMImageLoaderTestApp";
+			};
+			name = Debug;
+		};
+		FABAF61926B8303800128A94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2Z8328WFM8;
+				INFOPLIST_FILE = JMImageLoaderTestAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jivosite.JMImageLoaderTestAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JMImageLoaderTestApp.app/JMImageLoaderTestApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -494,6 +741,24 @@
 			buildConfigurations = (
 				FA47E3BB26B569D400C0F525 /* Debug */,
 				FA47E3BC26B569D400C0F525 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FABAF60926B8301700128A94 /* Build configuration list for PBXNativeTarget "JMImageLoaderTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FABAF60A26B8301700128A94 /* Debug */,
+				FABAF60B26B8301700128A94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FABAF61726B8303800128A94 /* Build configuration list for PBXNativeTarget "JMImageLoaderTestAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FABAF61826B8303800128A94 /* Debug */,
+				FABAF61926B8303800128A94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
