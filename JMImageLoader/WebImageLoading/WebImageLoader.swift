@@ -8,11 +8,11 @@
 import UIKit
 
 public class WebImageLoader {
-    private let nextLoader: JMImageLoading?
+    private let nextLoader: JMImageLoadingNode?
     
     private var currentImageLoadingDataTask: URLSessionDataTask? = nil
     
-    required public init(nextLoader: JMImageLoading? = nil) {
+    required public init(nextLoader: JMImageLoadingNode? = nil) {
         self.nextLoader = nextLoader
     }
     

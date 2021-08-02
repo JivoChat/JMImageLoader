@@ -8,15 +8,15 @@
 import UIKit
 
 public class ImageCacheLoader {
-    private let nextLoader: JMImageLoading?
+    private let nextLoader: JMImageLoadingNode?
     private let cache: ImageCaching
     
-    required convenience public init(nextLoader: JMImageLoading? = nil) {
+    required convenience public init(nextLoader: JMImageLoadingNode? = nil) {
         let defaultCache = ImageCache(config: .default)
         self.init(nextLoader: nextLoader, cache: defaultCache)
     }
     
-    required public init(nextLoader: JMImageLoading? = nil, cache: ImageCaching) {
+    required public init(nextLoader: JMImageLoadingNode? = nil, cache: ImageCaching) {
         self.nextLoader = nextLoader
         self.cache = cache
     }

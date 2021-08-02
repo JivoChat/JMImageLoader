@@ -11,4 +11,4 @@ public enum ImageCacheLoadingError: Error {
     case notFound
 }
 
-public protocol ImageCacheLoading: JMImageLoading {}
+public protocol ImageCacheLoading: JMImageLoadingNode {}

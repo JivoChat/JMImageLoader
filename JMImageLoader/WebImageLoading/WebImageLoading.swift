@@ -13,4 +13,4 @@ public enum WebImageLoadingError: Error {
     case unknown(Error?)
 }
 
-public protocol WebImageLoading: JMImageLoading {}
+public protocol WebImageLoading: JMImageLoadingNode {}
