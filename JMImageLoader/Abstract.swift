@@ -10,8 +10,7 @@ import UIKit
 public protocol JMImageLoading {
     init(nextLoader: JMImageLoading?)
 
-    @discardableResult
-    func load(with url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) -> Cancellable
+    func load(with url: URL, completion: @escaping (Result<UIImage, Error>) -> Void)
 }
 
 public enum JMImageLoadingStrategy {

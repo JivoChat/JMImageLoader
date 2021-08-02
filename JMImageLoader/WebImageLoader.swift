@@ -16,6 +16,10 @@ class WebImageLoader {
         self.nextLoader = nextLoader
     }
     
+    func cancelCurrentLoading() {
+        currentImageLoadingDataTask?.cancel()
+    }
+    
     private func handleResult(
         _ result: Result<UIImage, Error>,
         ofRequestWithUrl url: URL,
@@ -31,15 +35,8 @@ class WebImageLoader {
     }
 }
 
-extension WebImageLoader: Cancellable {
-    func cancel() {
-        currentImageLoadingDataTask?.cancel()
-    }
-}
-
 extension WebImageLoader: WebImageLoading {
-    @discardableResult
-    func load(with url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) -> Cancellable {
+    func load(with url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) {
         let urlRequest = URLRequest(url: url)
         let dataTask = URLSession.shared.dataTask(with: urlRequest) { [weak self] data, response, error in
             guard let httpsResponse = response as? HTTPURLResponse else {
@@ -61,7 +58,5 @@ extension WebImageLoader: WebImageLoading {
         }
         currentImageLoadingDataTask = dataTask
         dataTask.resume()
-
-        return dataTask
     }
 }

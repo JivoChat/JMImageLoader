@@ -7,7 +7,7 @@
 
 import UIKit
 
-public enum ImageCacheLoadingError {
+public enum ImageCacheLoadingError: Error {
     case notFound
 }
 
