@@ -15,7 +15,7 @@ class ImageCache {
     private let config: Config
     
     // MARK: Init
-    init(config: Config) {
+    init(config: Config = .default) {
         self.config = config
         
         setUp()

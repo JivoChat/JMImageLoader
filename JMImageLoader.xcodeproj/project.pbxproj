@@ -12,9 +12,10 @@
 		FA47E3B426B569D300C0F525 /* JMImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = FA47E3A626B569D300C0F525 /* JMImageLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA47E3BE26B56E2100C0F525 /* ImageCaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3BD26B56E2100C0F525 /* ImageCaching.swift */; };
 		FA47E3C726B56F1400C0F525 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3C626B56F1400C0F525 /* ImageCache.swift */; };
-		FA47E3C926B583D100C0F525 /* ImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3C826B583D100C0F525 /* ImageLoading.swift */; };
-		FA47E3CB26B5851700C0F525 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3CA26B5851700C0F525 /* ImageLoader.swift */; };
+		FA47E3C926B583D100C0F525 /* WebImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3C826B583D100C0F525 /* WebImageLoading.swift */; };
+		FA47E3CB26B5851700C0F525 /* WebImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3CA26B5851700C0F525 /* WebImageLoader.swift */; };
 		FA47E3CD26B587B400C0F525 /* URLSessionDataTask+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3CC26B587B400C0F525 /* URLSessionDataTask+Extensions.swift */; };
+		FA47E3D026B5AA2F00C0F525 /* Abstract.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3CF26B5AA2F00C0F525 /* Abstract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +37,10 @@
 		FA47E3B326B569D300C0F525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA47E3BD26B56E2100C0F525 /* ImageCaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCaching.swift; sourceTree = "<group>"; };
 		FA47E3C626B56F1400C0F525 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
-		FA47E3C826B583D100C0F525 /* ImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoading.swift; sourceTree = "<group>"; };
-		FA47E3CA26B5851700C0F525 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		FA47E3C826B583D100C0F525 /* WebImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageLoading.swift; sourceTree = "<group>"; };
+		FA47E3CA26B5851700C0F525 /* WebImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageLoader.swift; sourceTree = "<group>"; };
 		FA47E3CC26B587B400C0F525 /* URLSessionDataTask+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSessionDataTask+Extensions.swift"; sourceTree = "<group>"; };
+		FA47E3CF26B5AA2F00C0F525 /* Abstract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Abstract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +86,9 @@
 				FA47E3CE26B587CD00C0F525 /* Extensions */,
 				FA47E3BD26B56E2100C0F525 /* ImageCaching.swift */,
 				FA47E3C626B56F1400C0F525 /* ImageCache.swift */,
-				FA47E3C826B583D100C0F525 /* ImageLoading.swift */,
-				FA47E3CA26B5851700C0F525 /* ImageLoader.swift */,
+				FA47E3C826B583D100C0F525 /* WebImageLoading.swift */,
+				FA47E3CA26B5851700C0F525 /* WebImageLoader.swift */,
+				FA47E3CF26B5AA2F00C0F525 /* Abstract.swift */,
 				FA47E3A626B569D300C0F525 /* JMImageLoader.h */,
 				FA47E3A726B569D300C0F525 /* Info.plist */,
 			);
@@ -218,9 +221,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA47E3C926B583D100C0F525 /* ImageLoading.swift in Sources */,
+				FA47E3D026B5AA2F00C0F525 /* Abstract.swift in Sources */,
+				FA47E3C926B583D100C0F525 /* WebImageLoading.swift in Sources */,
 				FA47E3C726B56F1400C0F525 /* ImageCache.swift in Sources */,
-				FA47E3CB26B5851700C0F525 /* ImageLoader.swift in Sources */,
+				FA47E3CB26B5851700C0F525 /* WebImageLoader.swift in Sources */,
 				FA47E3BE26B56E2100C0F525 /* ImageCaching.swift in Sources */,
 				FA47E3CD26B587B400C0F525 /* URLSessionDataTask+Extensions.swift in Sources */,
 			);
