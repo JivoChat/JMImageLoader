@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ImageCache {
+public class ImageCache {
     // MARK: Preinitialized private properties
     private let internalCache = NSCache<NSString, UIImage>()
     
@@ -15,7 +15,7 @@ class ImageCache {
     private let config: Config
     
     // MARK: Init
-    init(config: Config = .default) {
+    public init(config: Config = .default) {
         self.config = config
         
         setUp()
@@ -45,7 +45,7 @@ class ImageCache {
 // MARK: ImageCaching conformance for ImageCache
 
 extension ImageCache: ImageCaching {
-    subscript(url: URL) -> UIImage? {
+    public subscript(url: URL) -> UIImage? {
         get {
             return image(for: url)
         }
@@ -54,11 +54,11 @@ extension ImageCache: ImageCaching {
         }
     }
     
-    func removeImage(by url: URL) {
+    public func removeImage(by url: URL) {
         internalCache.removeObject(forKey: NSString(string: url.absoluteString))
     }
     
-    func removeAllImages() {
+    public func removeAllImages() {
         internalCache.removeAllObjects()
     }
 }
@@ -66,7 +66,7 @@ extension ImageCache: ImageCaching {
 // MARK: ImageCache.Config
 
 extension ImageCache {
-    struct Config {
+    public struct Config {
         // MARK: Static properties
         private static let DEFAULT_MEMORY_LIMIT = 1024 * 1024 * 50
         
@@ -74,6 +74,11 @@ extension ImageCache {
         let memoryLimit: Int
         
         // MARK: Static properties
-        static let `default` = Config(memoryLimit: DEFAULT_MEMORY_LIMIT)
+        public static let `default` = Config(memoryLimit: DEFAULT_MEMORY_LIMIT)
+        
+        // MARK: Public init
+        public init(memoryLimit: Int) {
+            self.memoryLimit = memoryLimit
+        }
     }
 }

@@ -7,12 +7,12 @@
 
 import UIKit
 
-class WebImageLoader {
+public class WebImageLoader {
     private let nextLoader: JMImageLoading?
     
     private var currentImageLoadingDataTask: URLSessionDataTask? = nil
     
-    required init(nextLoader: JMImageLoading? = nil) {
+    required public init(nextLoader: JMImageLoading? = nil) {
         self.nextLoader = nextLoader
     }
     
@@ -25,18 +25,20 @@ class WebImageLoader {
         ofRequestWithUrl url: URL,
         forCompletionHandler completionHandler: @escaping (Result<UIImage, Error>) -> Void
     ) {
-        switch result {
-        case .success:
-            completionHandler(result)
-            
-        case .failure:
-            nextLoader.flatMap { $0.load(with: url, completion: completionHandler) } ?? completionHandler(result)
+        DispatchQueue.main.async { [weak self] in
+            switch result {
+            case .success:
+                completionHandler(result)
+                
+            case .failure:
+                self?.nextLoader.flatMap { $0.load(with: url, completion: completionHandler) } ?? completionHandler(result)
+            }
         }
     }
 }
 
 extension WebImageLoader: WebImageLoading {
-    func load(with url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) {
+    public func load(with url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) {
         let urlRequest = URLRequest(url: url)
         let dataTask = URLSession.shared.dataTask(with: urlRequest) { [weak self] data, response, error in
             guard let httpsResponse = response as? HTTPURLResponse else {

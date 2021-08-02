@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol ImageCaching {
+public protocol ImageCaching {
     subscript(_ url: URL) -> UIImage? { get set }
     
     func removeImage(by url: URL)
