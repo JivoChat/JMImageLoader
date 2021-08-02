@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum WebImageLoadingError: Error {
+public enum WebImageLoadingError: Error {
     case failureResponse(statusCode: Int, error: Error?)
     case decodingError
     case unknown(Error?)
