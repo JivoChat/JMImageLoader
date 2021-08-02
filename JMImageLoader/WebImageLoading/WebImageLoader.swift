@@ -8,7 +8,7 @@
 import UIKit
 
 public class WebImageLoader {
-    private let nextLoader: JMImageLoadingNode?
+    private var nextLoader: JMImageLoadingNode?
     
     private var currentImageLoadingDataTask: URLSessionDataTask? = nil
     
@@ -38,6 +38,10 @@ public class WebImageLoader {
 }
 
 extension WebImageLoader: WebImageLoading {
+    public func setNext(node: JMImageLoadingNode) {
+        nextLoader = node
+    }
+    
     public func load(with url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) {
         let urlRequest = URLRequest(url: url)
         let dataTask = URLSession.shared.dataTask(with: urlRequest) { [weak self] data, response, error in

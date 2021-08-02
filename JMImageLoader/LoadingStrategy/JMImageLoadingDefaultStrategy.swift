@@ -8,7 +8,7 @@
 import UIKit
 
 class JMImageLoadingDefaultStrategy {
-    private let cache: ImageCaching
+    private var cache: ImageCaching
     private let cacheLoader: ImageCacheLoader
     private let webLoader: WebImageLoader
     
@@ -16,11 +16,28 @@ class JMImageLoadingDefaultStrategy {
         self.cache = cache
         self.cacheLoader = cacheLoader
         self.webLoader = webLoader
+        
+        setUp()
+    }
+    
+    private func setUp() {
+        cacheLoader.setNext(node: webLoader)
     }
 }
 
 extension JMImageLoadingDefaultStrategy: JMImageLoading {
     func load(with url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) {
-        
+        cacheLoader.load(with: url) { [weak self] result in
+            switch result {
+            case let .success(image):
+                self?.cache[url] = image
+                
+            case let .failure(error):
+                print(error)
+                
+            }
+            
+            completion(result)
+        }
     }
 }

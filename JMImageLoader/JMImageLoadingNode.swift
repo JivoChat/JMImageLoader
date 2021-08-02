@@ -9,4 +9,6 @@ import UIKit
 
 public protocol JMImageLoadingNode: JMImageLoading {
     init(nextLoader: JMImageLoadingNode?)
+    
+    func setNext(node: JMImageLoadingNode)
 }

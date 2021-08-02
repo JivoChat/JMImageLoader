@@ -8,7 +8,7 @@
 import UIKit
 
 public class ImageCacheLoader {
-    private let nextLoader: JMImageLoadingNode?
+    private var nextLoader: JMImageLoadingNode?
     private let cache: ImageCaching
     
     required convenience public init(nextLoader: JMImageLoadingNode? = nil) {
@@ -23,6 +23,10 @@ public class ImageCacheLoader {
 }
 
 extension ImageCacheLoader: ImageCacheLoading {
+    public func setNext(node: JMImageLoadingNode) {
+        nextLoader = node
+    }
+    
     public func load(with url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) {
         guard let cachedImage = cache[url] else {
             nextLoader.flatMap { $0.load(with: url, completion: completion) } ?? completion(.failure(ImageCacheLoadingError.notFound)); return
