@@ -23,15 +23,15 @@ public class WebImageLoader {
     private func handleResult(
         _ result: Result<UIImage, Error>,
         ofRequestWithUrl url: URL,
-        forCompletionHandler completionHandler: @escaping (Result<UIImage, Error>) -> Void
+        forCompletionHandler completionHandler: @escaping (Result<UIImage, Error>, AnyClass) -> Void
     ) {
         DispatchQueue.main.async { [weak self] in
             switch result {
             case .success:
-                completionHandler(result)
+                completionHandler(result, Self.self)
                 
             case .failure:
-                self?.nextLoader.flatMap { $0.load(with: url, completion: completionHandler) } ?? completionHandler(result)
+                self?.nextLoader.flatMap { $0.load(with: url, completion: completionHandler) } ?? completionHandler(result, Self.self)
             }
         }
     }
@@ -42,7 +42,7 @@ extension WebImageLoader: WebImageLoading {
         nextLoader = node
     }
     
-    public func load(with url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) {
+    public func load(with url: URL, completion: @escaping (Result<UIImage, Error>, AnyClass) -> Void) {
         let urlRequest = URLRequest(url: url)
         let dataTask = URLSession.shared.dataTask(with: urlRequest) { [weak self] data, response, error in
             guard let httpsResponse = response as? HTTPURLResponse else {
@@ -57,7 +57,7 @@ extension WebImageLoader: WebImageLoading {
                 let data = data,
                 let image = UIImage(data: data)
             else {
-                return completion(.failure(WebImageLoadingError.decodingError))
+                return completion(.failure(WebImageLoadingError.decodingError), Self.self)
             }
             
             self?.handleResult(.success(image), ofRequestWithUrl: url, forCompletionHandler: completion)

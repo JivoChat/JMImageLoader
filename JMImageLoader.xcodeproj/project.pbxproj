@@ -28,6 +28,8 @@
 		FABAF62526B8469A00128A94 /* JMImageLoadingDefaultStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF62426B8469A00128A94 /* JMImageLoadingDefaultStrategy.swift */; };
 		FABAF62826B9227300128A94 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF62726B9227300128A94 /* Logger.swift */; };
 		FABAF62A26B9233E00128A94 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF62926B9233E00128A94 /* Logging.swift */; };
+		FABAF62C26B92C9D00128A94 /* JMImageLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA47E3A326B569D300C0F525 /* JMImageLoader.framework */; };
+		FABAF62D26B92C9D00128A94 /* JMImageLoader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA47E3A326B569D300C0F525 /* JMImageLoader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +47,28 @@
 			remoteGlobalIDString = FABAF5F726B8301600128A94;
 			remoteInfo = JMImageLoaderTestApp;
 		};
+		FABAF62E26B92C9D00128A94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA47E39A26B569D300C0F525 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA47E3A226B569D300C0F525;
+			remoteInfo = JMImageLoader;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FABAF63026B92C9D00128A94 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FABAF62D26B92C9D00128A94 /* JMImageLoader.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FA47E3A326B569D300C0F525 /* JMImageLoader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JMImageLoader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FABAF62C26B92C9D00128A94 /* JMImageLoader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +143,7 @@
 				FABAF5F926B8301600128A94 /* JMImageLoaderTestApp */,
 				FABAF61126B8303800128A94 /* JMImageLoaderTestAppTests */,
 				FA47E3A426B569D300C0F525 /* Products */,
+				FABAF62B26B92C9D00128A94 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -233,6 +258,13 @@
 			path = Logging;
 			sourceTree = "<group>";
 		};
+		FABAF62B26B92C9D00128A94 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -290,10 +322,12 @@
 				FABAF5F426B8301600128A94 /* Sources */,
 				FABAF5F526B8301600128A94 /* Frameworks */,
 				FABAF5F626B8301600128A94 /* Resources */,
+				FABAF63026B92C9D00128A94 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FABAF62F26B92C9D00128A94 /* PBXTargetDependency */,
 			);
 			name = JMImageLoaderTestApp;
 			productName = JMImageLoaderTestApp;
@@ -455,6 +489,11 @@
 			isa = PBXTargetDependency;
 			target = FABAF5F726B8301600128A94 /* JMImageLoaderTestApp */;
 			targetProxy = FABAF61526B8303800128A94 /* PBXContainerItemProxy */;
+		};
+		FABAF62F26B92C9D00128A94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA47E3A226B569D300C0F525 /* JMImageLoader */;
+			targetProxy = FABAF62E26B92C9D00128A94 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

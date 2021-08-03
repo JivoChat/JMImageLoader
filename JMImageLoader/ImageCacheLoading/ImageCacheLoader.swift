@@ -27,11 +27,11 @@ extension ImageCacheLoader: ImageCacheLoading {
         nextLoader = node
     }
     
-    public func load(with url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) {
+    public func load(with url: URL, completion: @escaping (Result<UIImage, Error>, AnyClass) -> Void) {
         guard let cachedImage = cache[url] else {
-            nextLoader.flatMap { $0.load(with: url, completion: completion) } ?? completion(.failure(ImageCacheLoadingError.notFound)); return
+            nextLoader.flatMap { $0.load(with: url, completion: completion) } ?? completion(.failure(ImageCacheLoadingError.notFound), Self.self); return
         }
         
-        completion(.success(cachedImage))
+        completion(.success(cachedImage), Self.self)
     }
 }

@@ -6,15 +6,14 @@
 //
 
 import UIKit
-import JMImageLoader
+@testable import JMImageLoader
 
 class ViewController: UIViewController {
     private let IMAGE_CACHE_MEMORY_LIMIT = 1024 * 1024 * 150
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var imageLoader: JMImageLoading?
-    private var cache: ImageCache?
+    private var imageLoadingDefaultStrategy: JMImageLoadingDefaultStrategy?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +21,9 @@ class ViewController: UIViewController {
         let imageCacheConfig = ImageCache.Config(memoryLimit: IMAGE_CACHE_MEMORY_LIMIT)
         let cache = ImageCache(config: imageCacheConfig)
         let webImageLoader = WebImageLoader()
-        self.imageLoader = ImageCacheLoader(nextLoader: webImageLoader, cache: cache)
-        self.cache = cache
+        let imageLoader = ImageCacheLoader(nextLoader: webImageLoader, cache: cache)
+        let logger = Logger(loggingLevel: .full)
+        self.imageLoadingDefaultStrategy = JMImageLoadingDefaultStrategy(cache: cache, cacheLoader: imageLoader, webLoader: webImageLoader, logger: logger)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -51,10 +51,9 @@ extension ViewController: UITableViewDataSource {
             return cell
         }
         
-        imageLoader?.load(with: url) { [weak self] result in
+        imageLoadingDefaultStrategy?.load(with: url) { result in
             switch result {
             case let .success(image):
-                self?.cache?[url] = image
                 cell.imageView?.image = image
                 cell.setNeedsLayout()
                 
