@@ -26,6 +26,8 @@
 		FABAF61326B8303800128A94 /* JMImageLoaderTestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF61226B8303800128A94 /* JMImageLoaderTestAppTests.swift */; };
 		FABAF62326B8463200128A94 /* JMImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF62126B8424900128A94 /* JMImageLoading.swift */; };
 		FABAF62526B8469A00128A94 /* JMImageLoadingDefaultStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF62426B8469A00128A94 /* JMImageLoadingDefaultStrategy.swift */; };
+		FABAF62826B9227300128A94 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF62726B9227300128A94 /* Logger.swift */; };
+		FABAF62A26B9233E00128A94 /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF62926B9233E00128A94 /* Logging.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		FABAF61426B8303800128A94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FABAF62126B8424900128A94 /* JMImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMImageLoading.swift; sourceTree = "<group>"; };
 		FABAF62426B8469A00128A94 /* JMImageLoadingDefaultStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMImageLoadingDefaultStrategy.swift; sourceTree = "<group>"; };
+		FABAF62726B9227300128A94 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		FABAF62926B9233E00128A94 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +136,7 @@
 		FA47E3A526B569D300C0F525 /* JMImageLoader */ = {
 			isa = PBXGroup;
 			children = (
+				FABAF62626B9226700128A94 /* Logging */,
 				FABAF62226B842A200128A94 /* ImageCaching */,
 				FABAF61E26B8422D00128A94 /* LoadingStrategy */,
 				FABAF61D26B8420600128A94 /* ImageCacheLoading */,
@@ -217,6 +222,15 @@
 				FA47E3C626B56F1400C0F525 /* ImageCache.swift */,
 			);
 			path = ImageCaching;
+			sourceTree = "<group>";
+		};
+		FABAF62626B9226700128A94 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				FABAF62926B9233E00128A94 /* Logging.swift */,
+				FABAF62726B9227300128A94 /* Logger.swift */,
+			);
+			path = Logging;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,8 +406,10 @@
 				FA47E3D026B5AA2F00C0F525 /* JMImageLoadingNode.swift in Sources */,
 				FA47E3C926B583D100C0F525 /* WebImageLoading.swift in Sources */,
 				FA47E3C726B56F1400C0F525 /* ImageCache.swift in Sources */,
+				FABAF62A26B9233E00128A94 /* Logging.swift in Sources */,
 				FA47E3CB26B5851700C0F525 /* WebImageLoader.swift in Sources */,
 				FABAF5DE26B825A900128A94 /* ImageCacheLoading.swift in Sources */,
+				FABAF62826B9227300128A94 /* Logger.swift in Sources */,
 				FA47E3BE26B56E2100C0F525 /* ImageCaching.swift in Sources */,
 				FABAF5E026B8265900128A94 /* ImageCacheLoader.swift in Sources */,
 				FABAF62326B8463200128A94 /* JMImageLoading.swift in Sources */,
