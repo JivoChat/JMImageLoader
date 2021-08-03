@@ -33,7 +33,7 @@ extension JMImageLoadingDefaultStrategy: JMImageLoading {
             switch result {
             case let .success(image):
                 self?.logger.log("Loaded image from \(String(describing: loaderType))")
-                if loaderType == WebImageLoading.self {
+                if loaderType == WebImageLoader.self {
                     self?.cache[url] = image
                 }
                 

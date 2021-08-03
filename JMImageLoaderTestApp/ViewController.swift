@@ -8,22 +8,24 @@
 import UIKit
 @testable import JMImageLoader
 
+fileprivate var imageLoadingDefaultStrategy: JMImageLoadingDefaultStrategy = {
+    let IMAGE_CACHE_MEMORY_LIMIT = 1024 * 1024 * 150
+    
+    let imageCacheConfig = ImageCache.Config(memoryLimit: IMAGE_CACHE_MEMORY_LIMIT)
+    let cache = ImageCache(config: imageCacheConfig)
+    let webImageLoader = WebImageLoader()
+    let imageLoader = ImageCacheLoader(nextLoader: webImageLoader, cache: cache)
+    let logger = Logger(loggingLevel: .full)
+    let imageLoadingDefaultStrategy = JMImageLoadingDefaultStrategy(cache: cache, cacheLoader: imageLoader, webLoader: webImageLoader, logger: logger)
+    
+    return imageLoadingDefaultStrategy
+}()
+
 class ViewController: UIViewController {
-    private let IMAGE_CACHE_MEMORY_LIMIT = 1024 * 1024 * 150
-    
     @IBOutlet weak var tableView: UITableView!
-    
-    private var imageLoadingDefaultStrategy: JMImageLoadingDefaultStrategy?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let imageCacheConfig = ImageCache.Config(memoryLimit: IMAGE_CACHE_MEMORY_LIMIT)
-        let cache = ImageCache(config: imageCacheConfig)
-        let webImageLoader = WebImageLoader()
-        let imageLoader = ImageCacheLoader(nextLoader: webImageLoader, cache: cache)
-        let logger = Logger(loggingLevel: .full)
-        self.imageLoadingDefaultStrategy = JMImageLoadingDefaultStrategy(cache: cache, cacheLoader: imageLoader, webLoader: webImageLoader, logger: logger)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -51,7 +53,7 @@ extension ViewController: UITableViewDataSource {
             return cell
         }
         
-        imageLoadingDefaultStrategy?.load(with: url) { result in
+        imageLoadingDefaultStrategy.load(with: url) { result in
             switch result {
             case let .success(image):
                 cell.imageView?.image = image
