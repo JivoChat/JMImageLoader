@@ -1,0 +1,16 @@
+PODS:
+  - JMImageLoader (0.0.1-beta.0)
+
+DEPENDENCIES:
+  - JMImageLoader (from `JMImageLoaderSources.podspec`)
+
+EXTERNAL SOURCES:
+  JMImageLoader:
+    :path: JMImageLoaderSources.podspec
+
+SPEC CHECKSUMS:
+  JMImageLoader: 7770178f2aaffb0d8cf2e26775fc956d8161622b
+
+PODFILE CHECKSUM: d7b79659a8362ca48922d0789cbf8b1db7c05068
+
+COCOAPODS: 1.10.1
