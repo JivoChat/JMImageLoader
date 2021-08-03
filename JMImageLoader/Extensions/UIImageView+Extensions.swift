@@ -7,6 +7,8 @@
 
 import UIKit
 
-extension UIImageView {
-    
+extension UIImageView: JMImageViewImageLoading {
+    func jmLoadImage(with url: URL, usingStrategy loadingStrategy: JMImageLoading) {
+        
+    }
 }

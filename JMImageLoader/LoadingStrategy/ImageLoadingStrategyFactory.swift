@@ -8,9 +8,18 @@
 import Foundation
 
 enum ImageLoadingStrategyFactory {
-    case `default`(imageCacheMemoryLimit: Int)
+    case `default`(withImageCacheMemoryLimit: Int)
     
-    private func buildDefault(withImageCacheMemoryLimit imageCacheMemoryLimit: Int) -> JMImageLoadingDefaultStrategy {
+    static func defaultShared(withImageCacheMemoryLimit imageCacheMemoryLimit: Int) -> JMImageLoading {
+        return defaultShared.flatMap { $0 }
+            ?? buildDefault(withImageCacheMemoryLimit: imageCacheMemoryLimit)
+    }
+}
+
+extension ImageLoadingStrategyFactory {
+    private static var defaultShared: JMImageLoading? = nil
+    
+    private static func buildDefault(withImageCacheMemoryLimit imageCacheMemoryLimit: Int) -> JMImageLoadingDefaultStrategy {
         let imageCacheConfig = ImageCache.Config(memoryLimit: imageCacheMemoryLimit)
         let imageCache = ImageCache(config: imageCacheConfig)
         
@@ -20,6 +29,7 @@ enum ImageLoadingStrategyFactory {
         let logger = Logger(loggingLevel: .full)
         
         let imageLoadingDefaultStrategy = JMImageLoadingDefaultStrategy(cache: imageCache, cacheLoader: imageCacheLoader, webLoader: webImageLoader, logger: logger)
+        defaultShared = imageLoadingDefaultStrategy
         
         return imageLoadingDefaultStrategy
     }
@@ -29,7 +39,7 @@ extension ImageLoadingStrategyFactory: Building {
     func build() -> JMImageLoading {
         switch self {
         case let .default(imageCacheMemoryLimit):
-            return buildDefault(withImageCacheMemoryLimit: imageCacheMemoryLimit)
+            return ImageLoadingStrategyFactory.buildDefault(withImageCacheMemoryLimit: imageCacheMemoryLimit)
         }
     }
 }

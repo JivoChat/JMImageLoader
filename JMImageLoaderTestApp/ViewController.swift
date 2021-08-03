@@ -11,7 +11,7 @@ import UIKit
 fileprivate var imageLoadingDefaultStrategy: JMImageLoading = {
     let IMAGE_CACHE_MEMORY_LIMIT = 1024 * 1024 * 50
     
-    let imageLoadingDefaultStrategy = ImageLoadingStrategyFactory.default(imageCacheMemoryLimit: IMAGE_CACHE_MEMORY_LIMIT).build()
+    let imageLoadingDefaultStrategy = ImageLoadingStrategyFactory.default(withImageCacheMemoryLimit: IMAGE_CACHE_MEMORY_LIMIT).build()
     
     return imageLoadingDefaultStrategy
 }()
@@ -19,8 +19,12 @@ fileprivate var imageLoadingDefaultStrategy: JMImageLoading = {
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
+    private var imageLoadingDefaultStrategy: JMImageLoading?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imageLoadingDefaultStrategy = ImageLoadingStrategyFactory.defaultShared(withImageCacheMemoryLimit: 1024 * 1024 * 50)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -48,7 +52,7 @@ extension ViewController: UITableViewDataSource {
             return cell
         }
         
-        imageLoadingDefaultStrategy.load(with: url) { result in
+        imageLoadingDefaultStrategy?.load(with: url) { result in
             switch result {
             case let .success(image):
                 cell.imageView?.image = image
