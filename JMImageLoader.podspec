@@ -46,6 +46,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.platform     = :ios, "10.0"
+  spec.swift_version = "4.0"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -65,7 +66,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.source_files  = "JMImageLoader/**/*.{h,m,swift}"
-  spec.exclude_files = "*Info.plist"
+  spec.exclude_files = [ "*Info.plist", "JMImageLoader/JMImageLoader/ImageCaching/ImageCaching.swift" ]
 
   spec.public_header_files = "JMImageLoader/JMImageLoader.h"
 

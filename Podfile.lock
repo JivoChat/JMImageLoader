@@ -2,15 +2,15 @@ PODS:
   - JMImageLoader (0.0.1-beta.0)
 
 DEPENDENCIES:
-  - JMImageLoader (from `JMImageLoaderSources.podspec`)
+  - JMImageLoader (= 0.0.1-beta.0)
 
-EXTERNAL SOURCES:
-  JMImageLoader:
-    :path: JMImageLoaderSources.podspec
+SPEC REPOS:
+  https://github.com/JivoChat/JMSpecsRepoDevelop.git:
+    - JMImageLoader
 
 SPEC CHECKSUMS:
-  JMImageLoader: 7770178f2aaffb0d8cf2e26775fc956d8161622b
+  JMImageLoader: 08ffa82584a4dd0114e0c5c5422859780326d6e4
 
-PODFILE CHECKSUM: d7b79659a8362ca48922d0789cbf8b1db7c05068
+PODFILE CHECKSUM: a3ce58016a93917942242ca0450e28dd491c591a
 
 COCOAPODS: 1.10.1
