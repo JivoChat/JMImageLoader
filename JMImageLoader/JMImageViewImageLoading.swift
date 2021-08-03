@@ -7,6 +7,7 @@
 
 import UIKit
 
-protocol JMImageViewImageLoading {
-    func jmLoadImage(with url: URL, usingStrategy loadingStrategy: JMImageLoading)
+public protocol JMImageViewImageLoading {
+    func jmLoadImage(with url: URL) -> JMCancellable
+    func jmLoadImage(with url: URL, usingStrategy loadingStrategy: JMImageLoading) -> JMCancellable
 }
