@@ -8,15 +8,10 @@
 import UIKit
 @testable import JMImageLoader
 
-fileprivate var imageLoadingDefaultStrategy: JMImageLoadingDefaultStrategy = {
-    let IMAGE_CACHE_MEMORY_LIMIT = 1024 * 1024 * 150
+fileprivate var imageLoadingDefaultStrategy: JMImageLoading = {
+    let IMAGE_CACHE_MEMORY_LIMIT = 1024 * 1024 * 50
     
-    let imageCacheConfig = ImageCache.Config(memoryLimit: IMAGE_CACHE_MEMORY_LIMIT)
-    let cache = ImageCache(config: imageCacheConfig)
-    let webImageLoader = WebImageLoader()
-    let imageLoader = ImageCacheLoader(nextLoader: webImageLoader, cache: cache)
-    let logger = Logger(loggingLevel: .full)
-    let imageLoadingDefaultStrategy = JMImageLoadingDefaultStrategy(cache: cache, cacheLoader: imageLoader, webLoader: webImageLoader, logger: logger)
+    let imageLoadingDefaultStrategy = ImageLoadingStrategyFactory.default(imageCacheMemoryLimit: IMAGE_CACHE_MEMORY_LIMIT).build()
     
     return imageLoadingDefaultStrategy
 }()
