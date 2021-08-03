@@ -1,0 +1,20 @@
+{
+  "name": "JMImageLoader",
+  "version": "0.0.1-beta.0",
+  "summary": "A library for convenient image loading from web. Can use local cache for images.",
+  "description": "With this library you can load images from internet and cache it in a convenient way. We strived to create a flexible tool allowing you to change the image processing pipeline as you want.",
+  "homepage": "https://github.com/JivoChat/JMImageLoader",
+  "license": "MIT",
+  "authors": {
+    "Anton_Karpushko": "habrabro@gmail.com"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source": {
+    "git": ""
+  },
+  "source_files": "JMImageLoader/**/*.{h,m,swift}",
+  "exclude_files": "*Info.plist",
+  "public_header_files": "JMImageLoader/JMImageLoader.h"
+}
