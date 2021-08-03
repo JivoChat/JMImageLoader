@@ -16,10 +16,6 @@ public class WebImageLoader {
         self.nextLoader = nextLoader
     }
     
-    func cancelCurrentLoading() {
-        currentImageLoadingDataTask?.cancel()
-    }
-    
     private func handleResult(
         _ result: Result<UIImage, Error>,
         ofRequestWithUrl url: URL,
@@ -64,5 +60,9 @@ extension WebImageLoader: WebImageLoading {
         }
         currentImageLoadingDataTask = dataTask
         dataTask.resume()
+    }
+    
+    public func cancelCurrentLoading() {
+        currentImageLoadingDataTask?.cancel()
     }
 }

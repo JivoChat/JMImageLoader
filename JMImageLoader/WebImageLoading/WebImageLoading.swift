@@ -13,4 +13,6 @@ public enum WebImageLoadingError: Error {
     case unknown(Error?)
 }
 
-public protocol WebImageLoading: JMImageLoadingNode {}
+public protocol WebImageLoading: JMImageLoadingNode {
+    func cancelCurrentLoading()
+}
