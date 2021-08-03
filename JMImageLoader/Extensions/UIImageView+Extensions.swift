@@ -8,7 +8,8 @@
 import UIKit
 
 extension UIImageView: JMImageViewImageLoading {
-    public func jmLoadImage(with url: URL) -> JMImageLoadingCancellable {
+    @discardableResult
+    public func jmLoadImage(with url: URL, completion: ((Result<UIImage, Error>) -> Void)? = nil) -> JMImageLoadingCancellable {
         let IMAGE_CACHE_MEMORY_LIMIT = 1024 * 1024 * 50
         
         let defaultLoadingStrategy = ImageLoadingStrategyFactory.defaultShared(withImageCacheMemoryLimit: IMAGE_CACHE_MEMORY_LIMIT)
@@ -20,12 +21,15 @@ extension UIImageView: JMImageViewImageLoading {
             case .failure:
                 break
             }
+            
+            completion?(result)
         }
         
         return task
     }
     
-    public func jmLoadImage(with url: URL, usingStrategy loadingStrategy: JMImageLoading) -> JMImageLoadingCancellable {
+    @discardableResult
+    public func jmLoadImage(with url: URL, usingStrategy loadingStrategy: JMImageLoading, completion: ((Result<UIImage, Error>) -> Void)? = nil) -> JMImageLoadingCancellable {
         let task = loadingStrategy.load(with: url) { [weak self] result in
             switch result {
             case let .success(image):
@@ -34,6 +38,8 @@ extension UIImageView: JMImageViewImageLoading {
             case .failure:
                 break
             }
+            
+            completion?(result)
         }
         
         return task

@@ -7,7 +7,9 @@
 
 import UIKit
 
-public protocol JMImageLoadingCompletable {
+// MARK: Not using for now
+
+protocol JMImageLoadingCompletable {
     func onSuccess(_ block: @escaping (UIImage) -> Void)
     func onFailure(_ block: @escaping (Error) -> Void)
 }

@@ -52,7 +52,13 @@ extension ViewController: UITableViewDataSource {
             return cell
         }
         
-        cell.imageView?.jmLoadImage(with: url)
+        cell.imageView?.jmLoadImage(with: url) { result in
+            switch result {
+            case .failure: cell.textLabel?.text = "Image was not loaded :((("
+            default: break
+            }
+            cell.setNeedsLayout()
+        }
         
         return cell
     }
