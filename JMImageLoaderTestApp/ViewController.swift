@@ -8,6 +8,8 @@
 import UIKit
 @testable import JMImageLoader
 
+// File global image loader singleton
+
 fileprivate var imageLoadingDefaultStrategy: JMImageLoading = {
     let IMAGE_CACHE_MEMORY_LIMIT = 1024 * 1024 * 50
     
@@ -23,8 +25,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        imageLoadingDefaultStrategy = ImageLoadingStrategyFactory.defaultShared(withImageCacheMemoryLimit: 1024 * 1024 * 50)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -52,17 +52,7 @@ extension ViewController: UITableViewDataSource {
             return cell
         }
         
-        imageLoadingDefaultStrategy?.load(with: url) { result in
-            switch result {
-            case let .success(image):
-                cell.imageView?.image = image
-                cell.setNeedsLayout()
-                
-            case let .failure(error):
-                print(error)
-                cell.textLabel?.text = "Image was not loaded!"
-            }
-        }
+        cell.imageView?.jmLoadImage(with: url)
         
         return cell
     }

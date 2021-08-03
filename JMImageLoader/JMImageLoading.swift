@@ -9,5 +9,5 @@ import UIKit
 
 public protocol JMImageLoading {
     @discardableResult
-    func load(with url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) -> JMCancellable
+    func load(with url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) -> JMImageLoadingCancellable
 }

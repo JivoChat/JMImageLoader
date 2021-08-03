@@ -15,7 +15,7 @@ public struct JMDefaultLoadingStrategyTask {
     }
 }
 
-extension JMDefaultLoadingStrategyTask: JMCancellable {
+extension JMDefaultLoadingStrategyTask: JMImageLoadingCancellable {
     public func cancel() {
         webImageLoader.cancelCurrentLoading()
     }

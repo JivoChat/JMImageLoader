@@ -28,7 +28,7 @@ class JMImageLoadingDefaultStrategy {
 }
 
 extension JMImageLoadingDefaultStrategy: JMImageLoading {
-    func load(with url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) -> JMCancellable {
+    func load(with url: URL, completion: @escaping (Result<UIImage, Error>) -> Void) -> JMImageLoadingCancellable {
         cacheLoader.load(with: url) { [weak self] result, loaderType in
             switch result {
             case let .success(image):

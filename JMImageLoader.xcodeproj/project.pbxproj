@@ -32,10 +32,11 @@
 		FABAF62D26B92C9D00128A94 /* JMImageLoader.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA47E3A326B569D300C0F525 /* JMImageLoader.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FABAF63226B9560700128A94 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF63126B9560700128A94 /* UIImageView+Extensions.swift */; };
 		FABAF63426B9567800128A94 /* JMImageViewImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF63326B9567800128A94 /* JMImageViewImageLoading.swift */; };
-		FABAF63626B9570500128A94 /* JMCancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF63526B9570500128A94 /* JMCancellable.swift */; };
+		FABAF63626B9570500128A94 /* JMImageLoadingCancellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF63526B9570500128A94 /* JMImageLoadingCancellable.swift */; };
 		FABAF63826B9579400128A94 /* JMDefaultLoadingStrategyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF63726B9579400128A94 /* JMDefaultLoadingStrategyTask.swift */; };
 		FABAF63A26B95C6F00128A94 /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF63926B95C6F00128A94 /* Building.swift */; };
 		FABAF63C26B95CD100128A94 /* ImageLoadingStrategyFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF63B26B95CD100128A94 /* ImageLoadingStrategyFactory.swift */; };
+		FABAF63E26B99CFE00128A94 /* JMImageLoadingCompletable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF63D26B99CFE00128A94 /* JMImageLoadingCompletable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,10 +108,11 @@
 		FABAF62926B9233E00128A94 /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		FABAF63126B9560700128A94 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		FABAF63326B9567800128A94 /* JMImageViewImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMImageViewImageLoading.swift; sourceTree = "<group>"; };
-		FABAF63526B9570500128A94 /* JMCancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMCancellable.swift; sourceTree = "<group>"; };
+		FABAF63526B9570500128A94 /* JMImageLoadingCancellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMImageLoadingCancellable.swift; sourceTree = "<group>"; };
 		FABAF63726B9579400128A94 /* JMDefaultLoadingStrategyTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMDefaultLoadingStrategyTask.swift; sourceTree = "<group>"; };
 		FABAF63926B95C6F00128A94 /* Building.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		FABAF63B26B95CD100128A94 /* ImageLoadingStrategyFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadingStrategyFactory.swift; sourceTree = "<group>"; };
+		FABAF63D26B99CFE00128A94 /* JMImageLoadingCompletable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMImageLoadingCompletable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,7 +184,8 @@
 				FABAF62126B8424900128A94 /* JMImageLoading.swift */,
 				FA47E3CF26B5AA2F00C0F525 /* JMImageLoadingNode.swift */,
 				FABAF63326B9567800128A94 /* JMImageViewImageLoading.swift */,
-				FABAF63526B9570500128A94 /* JMCancellable.swift */,
+				FABAF63526B9570500128A94 /* JMImageLoadingCancellable.swift */,
+				FABAF63D26B99CFE00128A94 /* JMImageLoadingCompletable.swift */,
 				FABAF63926B95C6F00128A94 /* Building.swift */,
 				FA47E3A626B569D300C0F525 /* JMImageLoader.h */,
 				FA47E3A726B569D300C0F525 /* Info.plist */,
@@ -456,7 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA47E3D026B5AA2F00C0F525 /* JMImageLoadingNode.swift in Sources */,
-				FABAF63626B9570500128A94 /* JMCancellable.swift in Sources */,
+				FABAF63626B9570500128A94 /* JMImageLoadingCancellable.swift in Sources */,
 				FA47E3C926B583D100C0F525 /* WebImageLoading.swift in Sources */,
 				FABAF63826B9579400128A94 /* JMDefaultLoadingStrategyTask.swift in Sources */,
 				FA47E3C726B56F1400C0F525 /* ImageCache.swift in Sources */,
@@ -468,6 +471,7 @@
 				FABAF63226B9560700128A94 /* UIImageView+Extensions.swift in Sources */,
 				FABAF62826B9227300128A94 /* Logger.swift in Sources */,
 				FA47E3BE26B56E2100C0F525 /* ImageCaching.swift in Sources */,
+				FABAF63E26B99CFE00128A94 /* JMImageLoadingCompletable.swift in Sources */,
 				FABAF5E026B8265900128A94 /* ImageCacheLoader.swift in Sources */,
 				FABAF63426B9567800128A94 /* JMImageViewImageLoading.swift in Sources */,
 				FABAF62326B8463200128A94 /* JMImageLoading.swift in Sources */,
