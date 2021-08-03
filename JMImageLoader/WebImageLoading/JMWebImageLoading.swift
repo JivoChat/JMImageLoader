@@ -1,5 +1,5 @@
 //
-//  WebImageLoading.swift
+//  JMWebImageLoading.swift
 //  JMImageLoader
 //
 //  Created by macbook on 31.07.2021.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-public enum WebImageLoadingError: Error {
+public enum JMWebImageLoadingError: Error {
     case failureResponse(statusCode: Int, error: Error?)
     case decodingError
     case unknown(Error?)
 }
 
-public protocol WebImageLoading: JMImageLoadingNode {
+public protocol JMWebImageLoading: JMImageLoadingNode {
     func cancelCurrentLoading()
 }

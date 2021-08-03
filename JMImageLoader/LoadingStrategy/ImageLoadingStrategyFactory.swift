@@ -20,11 +20,11 @@ extension ImageLoadingStrategyFactory {
     private static var defaultShared: JMImageLoading? = nil
     
     private static func buildDefault(withImageCacheMemoryLimit imageCacheMemoryLimit: Int) -> JMImageLoadingDefaultStrategy {
-        let imageCacheConfig = ImageCache.Config(memoryLimit: imageCacheMemoryLimit)
-        let imageCache = ImageCache(config: imageCacheConfig)
+        let imageCacheConfig = JMImageCache.Config(memoryLimit: imageCacheMemoryLimit)
+        let imageCache = JMImageCache(config: imageCacheConfig)
         
-        let webImageLoader = WebImageLoader()
-        let imageCacheLoader = ImageCacheLoader(nextLoader: webImageLoader, cache: imageCache)
+        let webImageLoader = JMWebImageLoader()
+        let imageCacheLoader = JMImageCacheLoader(nextLoader: webImageLoader, cache: imageCache)
         
         let logger = Logger(loggingLevel: .full)
         

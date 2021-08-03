@@ -1,5 +1,5 @@
 //
-//  WebImageLoader.swift
+//  JMWebImageLoader.swift
 //  JMImageLoader
 //
 //  Created by macbook on 31.07.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class WebImageLoader {
+public class JMWebImageLoader {
     private var nextLoader: JMImageLoadingNode?
     
     private var currentImageLoadingDataTask: URLSessionDataTask? = nil
@@ -33,7 +33,7 @@ public class WebImageLoader {
     }
 }
 
-extension WebImageLoader: WebImageLoading {
+extension JMWebImageLoader: JMWebImageLoading {
     public func setNext(node: JMImageLoadingNode) {
         nextLoader = node
     }
@@ -42,18 +42,18 @@ extension WebImageLoader: WebImageLoading {
         let urlRequest = URLRequest(url: url)
         let dataTask = URLSession.shared.dataTask(with: urlRequest) { [weak self] data, response, error in
             guard let httpsResponse = response as? HTTPURLResponse else {
-                self?.handleResult(.failure(WebImageLoadingError.unknown(error)), ofRequestWithUrl: url, forCompletionHandler: completion); return
+                self?.handleResult(.failure(JMWebImageLoadingError.unknown(error)), ofRequestWithUrl: url, forCompletionHandler: completion); return
             }
             
             guard httpsResponse.statusCode == 200, error == nil else {
-                self?.handleResult(.failure(WebImageLoadingError.failureResponse(statusCode: httpsResponse.statusCode, error: error)), ofRequestWithUrl: url, forCompletionHandler: completion); return
+                self?.handleResult(.failure(JMWebImageLoadingError.failureResponse(statusCode: httpsResponse.statusCode, error: error)), ofRequestWithUrl: url, forCompletionHandler: completion); return
             }
             
             guard
                 let data = data,
                 let image = UIImage(data: data)
             else {
-                return completion(.failure(WebImageLoadingError.decodingError), Self.self)
+                return completion(.failure(JMWebImageLoadingError.decodingError), Self.self)
             }
             
             self?.handleResult(.success(image), ofRequestWithUrl: url, forCompletionHandler: completion)

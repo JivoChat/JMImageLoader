@@ -10,13 +10,13 @@
 		FA47E3AD26B569D300C0F525 /* JMImageLoader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA47E3A326B569D300C0F525 /* JMImageLoader.framework */; };
 		FA47E3B226B569D300C0F525 /* JMImageLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3B126B569D300C0F525 /* JMImageLoaderTests.swift */; };
 		FA47E3B426B569D300C0F525 /* JMImageLoader.h in Headers */ = {isa = PBXBuildFile; fileRef = FA47E3A626B569D300C0F525 /* JMImageLoader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FA47E3BE26B56E2100C0F525 /* ImageCaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3BD26B56E2100C0F525 /* ImageCaching.swift */; };
-		FA47E3C726B56F1400C0F525 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3C626B56F1400C0F525 /* ImageCache.swift */; };
-		FA47E3C926B583D100C0F525 /* WebImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3C826B583D100C0F525 /* WebImageLoading.swift */; };
-		FA47E3CB26B5851700C0F525 /* WebImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3CA26B5851700C0F525 /* WebImageLoader.swift */; };
+		FA47E3BE26B56E2100C0F525 /* JMImageCaching.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3BD26B56E2100C0F525 /* JMImageCaching.swift */; };
+		FA47E3C726B56F1400C0F525 /* JMImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3C626B56F1400C0F525 /* JMImageCache.swift */; };
+		FA47E3C926B583D100C0F525 /* JMWebImageLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3C826B583D100C0F525 /* JMWebImageLoading.swift */; };
+		FA47E3CB26B5851700C0F525 /* JMWebImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3CA26B5851700C0F525 /* JMWebImageLoader.swift */; };
 		FA47E3D026B5AA2F00C0F525 /* JMImageLoadingNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47E3CF26B5AA2F00C0F525 /* JMImageLoadingNode.swift */; };
-		FABAF5DE26B825A900128A94 /* ImageCacheLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF5DD26B825A900128A94 /* ImageCacheLoading.swift */; };
-		FABAF5E026B8265900128A94 /* ImageCacheLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF5DF26B8265900128A94 /* ImageCacheLoader.swift */; };
+		FABAF5DE26B825A900128A94 /* JMImageCacheLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF5DD26B825A900128A94 /* JMImageCacheLoading.swift */; };
+		FABAF5E026B8265900128A94 /* JMImageCacheLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF5DF26B8265900128A94 /* JMImageCacheLoader.swift */; };
 		FABAF5FB26B8301600128A94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF5FA26B8301600128A94 /* AppDelegate.swift */; };
 		FABAF5FD26B8301600128A94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF5FC26B8301600128A94 /* SceneDelegate.swift */; };
 		FABAF5FF26B8301600128A94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABAF5FE26B8301600128A94 /* ViewController.swift */; };
@@ -84,13 +84,13 @@
 		FA47E3AC26B569D300C0F525 /* JMImageLoaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JMImageLoaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA47E3B126B569D300C0F525 /* JMImageLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMImageLoaderTests.swift; sourceTree = "<group>"; };
 		FA47E3B326B569D300C0F525 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA47E3BD26B56E2100C0F525 /* ImageCaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCaching.swift; sourceTree = "<group>"; };
-		FA47E3C626B56F1400C0F525 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
-		FA47E3C826B583D100C0F525 /* WebImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageLoading.swift; sourceTree = "<group>"; };
-		FA47E3CA26B5851700C0F525 /* WebImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebImageLoader.swift; sourceTree = "<group>"; };
+		FA47E3BD26B56E2100C0F525 /* JMImageCaching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMImageCaching.swift; sourceTree = "<group>"; };
+		FA47E3C626B56F1400C0F525 /* JMImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMImageCache.swift; sourceTree = "<group>"; };
+		FA47E3C826B583D100C0F525 /* JMWebImageLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMWebImageLoading.swift; sourceTree = "<group>"; };
+		FA47E3CA26B5851700C0F525 /* JMWebImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMWebImageLoader.swift; sourceTree = "<group>"; };
 		FA47E3CF26B5AA2F00C0F525 /* JMImageLoadingNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMImageLoadingNode.swift; sourceTree = "<group>"; };
-		FABAF5DD26B825A900128A94 /* ImageCacheLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheLoading.swift; sourceTree = "<group>"; };
-		FABAF5DF26B8265900128A94 /* ImageCacheLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheLoader.swift; sourceTree = "<group>"; };
+		FABAF5DD26B825A900128A94 /* JMImageCacheLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMImageCacheLoading.swift; sourceTree = "<group>"; };
+		FABAF5DF26B8265900128A94 /* JMImageCacheLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMImageCacheLoader.swift; sourceTree = "<group>"; };
 		FABAF5F826B8301600128A94 /* JMImageLoaderTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JMImageLoaderTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FABAF5FA26B8301600128A94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FABAF5FC26B8301600128A94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -236,8 +236,8 @@
 		FABAF61C26B841F900128A94 /* WebImageLoading */ = {
 			isa = PBXGroup;
 			children = (
-				FA47E3C826B583D100C0F525 /* WebImageLoading.swift */,
-				FA47E3CA26B5851700C0F525 /* WebImageLoader.swift */,
+				FA47E3C826B583D100C0F525 /* JMWebImageLoading.swift */,
+				FA47E3CA26B5851700C0F525 /* JMWebImageLoader.swift */,
 			);
 			path = WebImageLoading;
 			sourceTree = "<group>";
@@ -245,8 +245,8 @@
 		FABAF61D26B8420600128A94 /* ImageCacheLoading */ = {
 			isa = PBXGroup;
 			children = (
-				FABAF5DD26B825A900128A94 /* ImageCacheLoading.swift */,
-				FABAF5DF26B8265900128A94 /* ImageCacheLoader.swift */,
+				FABAF5DD26B825A900128A94 /* JMImageCacheLoading.swift */,
+				FABAF5DF26B8265900128A94 /* JMImageCacheLoader.swift */,
 			);
 			path = ImageCacheLoading;
 			sourceTree = "<group>";
@@ -264,8 +264,8 @@
 		FABAF62226B842A200128A94 /* ImageCaching */ = {
 			isa = PBXGroup;
 			children = (
-				FA47E3BD26B56E2100C0F525 /* ImageCaching.swift */,
-				FA47E3C626B56F1400C0F525 /* ImageCache.swift */,
+				FA47E3BD26B56E2100C0F525 /* JMImageCaching.swift */,
+				FA47E3C626B56F1400C0F525 /* JMImageCache.swift */,
 			);
 			path = ImageCaching;
 			sourceTree = "<group>";
@@ -460,19 +460,19 @@
 			files = (
 				FA47E3D026B5AA2F00C0F525 /* JMImageLoadingNode.swift in Sources */,
 				FABAF63626B9570500128A94 /* JMImageLoadingCancellable.swift in Sources */,
-				FA47E3C926B583D100C0F525 /* WebImageLoading.swift in Sources */,
+				FA47E3C926B583D100C0F525 /* JMWebImageLoading.swift in Sources */,
 				FABAF63826B9579400128A94 /* JMDefaultLoadingStrategyTask.swift in Sources */,
-				FA47E3C726B56F1400C0F525 /* ImageCache.swift in Sources */,
+				FA47E3C726B56F1400C0F525 /* JMImageCache.swift in Sources */,
 				FABAF62A26B9233E00128A94 /* Logging.swift in Sources */,
-				FA47E3CB26B5851700C0F525 /* WebImageLoader.swift in Sources */,
+				FA47E3CB26B5851700C0F525 /* JMWebImageLoader.swift in Sources */,
 				FABAF63C26B95CD100128A94 /* ImageLoadingStrategyFactory.swift in Sources */,
 				FABAF63A26B95C6F00128A94 /* Building.swift in Sources */,
-				FABAF5DE26B825A900128A94 /* ImageCacheLoading.swift in Sources */,
+				FABAF5DE26B825A900128A94 /* JMImageCacheLoading.swift in Sources */,
 				FABAF63226B9560700128A94 /* UIImageView+Extensions.swift in Sources */,
 				FABAF62826B9227300128A94 /* Logger.swift in Sources */,
-				FA47E3BE26B56E2100C0F525 /* ImageCaching.swift in Sources */,
+				FA47E3BE26B56E2100C0F525 /* JMImageCaching.swift in Sources */,
 				FABAF63E26B99CFE00128A94 /* JMImageLoadingCompletable.swift in Sources */,
-				FABAF5E026B8265900128A94 /* ImageCacheLoader.swift in Sources */,
+				FABAF5E026B8265900128A94 /* JMImageCacheLoader.swift in Sources */,
 				FABAF63426B9567800128A94 /* JMImageViewImageLoading.swift in Sources */,
 				FABAF62326B8463200128A94 /* JMImageLoading.swift in Sources */,
 				FABAF62526B8469A00128A94 /* JMImageLoadingDefaultStrategy.swift in Sources */,

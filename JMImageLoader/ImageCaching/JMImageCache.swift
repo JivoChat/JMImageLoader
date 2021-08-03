@@ -1,5 +1,5 @@
 //
-//  ImageCache.swift
+//  JMImageCache.swift
 //  JMImageLoader
 //
 //  Created by macbook on 31.07.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class ImageCache {
+public class JMImageCache {
     // MARK: Preinitialized private properties
     private let internalCache = NSCache<NSString, UIImage>()
     
@@ -42,9 +42,9 @@ public class ImageCache {
     }
 }
 
-// MARK: ImageCaching conformance for ImageCache
+// MARK: ImageCaching conformance for JMImageCache
 
-extension ImageCache: ImageCaching {
+extension JMImageCache: JMImageCaching {
     public subscript(url: URL) -> UIImage? {
         get {
             return image(for: url)
@@ -63,9 +63,9 @@ extension ImageCache: ImageCaching {
     }
 }
 
-// MARK: ImageCache.Config
+// MARK: JMImageCache.Config
 
-extension ImageCache {
+extension JMImageCache {
     public struct Config {
         // MARK: Static properties
         private static let DEFAULT_MEMORY_LIMIT = 1024 * 1024 * 50

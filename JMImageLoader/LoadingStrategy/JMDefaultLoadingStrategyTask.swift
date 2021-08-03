@@ -8,9 +8,9 @@
 import Foundation
 
 public struct JMDefaultLoadingStrategyTask {
-    private let webImageLoader: WebImageLoading
+    private let webImageLoader: JMWebImageLoading
     
-    public init(webImageLoader: WebImageLoading) {
+    public init(webImageLoader: JMWebImageLoading) {
         self.webImageLoader = webImageLoader
     }
 }

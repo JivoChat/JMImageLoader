@@ -8,12 +8,12 @@
 import UIKit
 
 class JMImageLoadingDefaultStrategy {
-    private var cache: ImageCaching
-    private let cacheLoader: ImageCacheLoader
-    private let webLoader: WebImageLoader
+    private var cache: JMImageCaching
+    private let cacheLoader: JMImageCacheLoader
+    private let webLoader: JMWebImageLoader
     private let logger: Logging
     
-    init(cache: ImageCaching, cacheLoader: ImageCacheLoader, webLoader: WebImageLoader, logger: Logging) {
+    init(cache: JMImageCaching, cacheLoader: JMImageCacheLoader, webLoader: JMWebImageLoader, logger: Logging) {
         self.cache = cache
         self.cacheLoader = cacheLoader
         self.webLoader = webLoader
@@ -33,7 +33,7 @@ extension JMImageLoadingDefaultStrategy: JMImageLoading {
             switch result {
             case let .success(image):
                 self?.logger.log("Loaded image from \(String(describing: loaderType))")
-                if loaderType == WebImageLoader.self {
+                if loaderType == JMWebImageLoader.self {
                     self?.cache[url] = image
                 }
                 
