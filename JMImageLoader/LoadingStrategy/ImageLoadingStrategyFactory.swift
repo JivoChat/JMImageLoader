@@ -26,7 +26,7 @@ extension ImageLoadingStrategyFactory {
         let webImageLoader = JMWebImageLoader()
         let imageCacheLoader = JMImageCacheLoader(nextLoader: webImageLoader, cache: imageCache)
         
-        let logger = Logger(loggingLevel: .full)
+        let logger = Logger(loggingLevel: .silent)
         
         let imageLoadingDefaultStrategy = JMImageLoadingDefaultStrategy(cache: imageCache, cacheLoader: imageCacheLoader, webLoader: webImageLoader, logger: logger)
         defaultShared = imageLoadingDefaultStrategy
