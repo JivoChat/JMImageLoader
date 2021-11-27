@@ -18,6 +18,7 @@ extension UIImageView: JMImageViewImageLoading {
     public func jmLoadImage(with url: URL, usingStrategy loadingStrategy: JMImageLoading, completion: ((Result<UIImage, Error>) -> Void)? = nil) -> JMImageLoadingCancellable {
         let indicator = retrieveIndicator()
         indicator.isHidden = false
+        indicator.startAnimating()
         
         let task = loadingStrategy.load(with: url) { [weak self] result in
             switch result {
@@ -28,7 +29,9 @@ extension UIImageView: JMImageViewImageLoading {
                 break
             }
             
+            indicator.stopAnimating()
             indicator.isHidden = true
+
             completion?(result)
         }
         
