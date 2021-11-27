@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "JMImageLoader"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "A library for convenient image loading from web. Can use local cache for images."
 
   # This description is used to generate tags and improve search results.
