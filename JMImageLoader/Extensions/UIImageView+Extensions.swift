@@ -2,7 +2,7 @@
 //  UIImageView+Extensions.swift
 //  JMImageLoader
 //
-//  Created by macbook on 03.08.2021.
+//  Created by Anton Karpushko on 03.08.2021.
 //
 
 import UIKit
