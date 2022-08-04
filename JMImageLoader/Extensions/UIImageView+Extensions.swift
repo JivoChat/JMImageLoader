@@ -21,18 +21,21 @@ extension UIImageView: JMImageViewImageLoading {
         indicator.startAnimating()
         
         let task = loadingStrategy.load(with: url) { [weak self] result in
-            switch result {
-            case let .success(image):
-                self?.image = image
+            DispatchQueue.main.async {
+                switch result {
+                case let .success(image) where image.size == .zero:
+                    break
+                case let .success(image):
+                    self?.image = image
+                case .failure:
+                    break
+                }
                 
-            case .failure:
-                break
-            }
-            
-            indicator.stopAnimating()
-            indicator.isHidden = true
+                indicator.stopAnimating()
+                indicator.isHidden = true
 
-            completion?(result)
+                completion?(result)
+            }
         }
         
         return task
