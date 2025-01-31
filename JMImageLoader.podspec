@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "JMImageLoader"
-  spec.version      = "1.0.1"
+  spec.version      = "2.0.0"
   spec.summary      = "A library for convenient image loading from web. Can use local cache for images."
 
   # This description is used to generate tags and improve search results.
@@ -54,7 +54,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/JivoChat/JMImageLoader.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/JivoChat/JMImageLoader.git", :tag => "v#{spec.version}" }
   spec.swift_version = '5.0'
 
 
@@ -67,7 +67,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.source_files  = "JMImageLoader/**/*.{h,m,swift}"
-  spec.exclude_files = [ "*Info.plist", "JMImageLoader/JMImageLoader/ImageCaching/ImageCaching.swift" ]
+  spec.exclude_files = [ "*Info.plist", "JMImageLoader/JMImageLoader/ImageCaching/ImageCaching.swift", "Package.swift" ]
 
   spec.public_header_files = "JMImageLoader/JMImageLoader.h"
 
